@@ -1,17 +1,17 @@
 
 // NEED TO UPDATE THIS TYPEDEFS
 const typeDefs = `
-  type Profile {
+  type User {
     _id: ID
-    name: String
+    username: String
     email: String
     password: String
-    skills: [String]!
+    savedBooks: [String]!
   }
 
   type Auth {
     token: ID!
-    profile: Profile
+    user: User
   }
 
   type Query {
@@ -27,7 +27,7 @@ const typeDefs = `
 
     addSkill(profileId: ID!, skill: String!): Profile
     removeProfile: Profile
-    removeSkill(skill: String!): Profile
+    removeBook(savedBooks: String!): User
   }
 `;
 
