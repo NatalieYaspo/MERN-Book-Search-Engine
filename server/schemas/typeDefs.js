@@ -6,7 +6,17 @@ const typeDefs = `
     username: String
     email: String
     password: String
-    savedBooks: [String]!
+    bookCount: Int
+    savedBooks: [Book]!
+  }
+
+  type Book {
+    bookId: String
+    authors: [String]!
+    description: String
+    title: String
+    image:
+    link:
   }
 
   type Auth {
@@ -15,19 +25,16 @@ const typeDefs = `
   }
 
   type Query {
-    profiles: [Profile]!
-    profile(profileId: ID!): Profile
-    # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
-    me: Profile
+    me: User
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addSkill(profileId: ID!, skill: String!): Profile
-    removeProfile: Profile
-    removeBook(savedBooks: String!): User
+    saveBook(????): User
+
+    removeBook(bookId: String!): User
   }
 `;
 
