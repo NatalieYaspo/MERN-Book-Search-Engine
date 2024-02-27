@@ -6,14 +6,14 @@ const resolvers = {
       // users: async () => {
       //   return User.find().populate('books');
       // },
-      // user: async (parent, { username }) => {
-      //   return User.findOne({ username }).populate('books');
-      // },
-    //   thoughts: async (parent, { username }) => {
+      user: async (parent, { username }) => {
+        return User.findOne({ username }).populate('books');
+      },
+    //   nooks: async (parent, { username }) => {
     //     const params = username ? { username } : {};
     //     return Thought.find(params).sort({ createdAt: -1 });
     //   },
-    //   thought: async (parent, { thoughtId }) => {
+    //   book: async (parent, { thoughtId }) => {
     //     return Thought.findOne({ _id: thoughtId });
     //   },
       me: async (parent, args, context) => {
@@ -47,7 +47,15 @@ const resolvers = {
     
           return { token, user };
         },
-        // saveBook: async (parent, { bookData }) => {
+        // saveBook: async (parent, bookData, context) => {
+          // console.log(bookData)
+          // if (context.user) {
+          //   return User.findOneAndUpdate(
+          //   {_id: context.user._id}
+          //   {$pull: {}}
+          //   {new: true}
+          // )
+          // }
 
         // }
     }
