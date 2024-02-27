@@ -7,7 +7,7 @@ const typeDefs = `
     email: String
     password: String
     bookCount: Int
-    savedBooks: [Book]!
+    savedBooks: [Book]
   }
 
   type Book {
@@ -15,8 +15,6 @@ const typeDefs = `
     authors: [String]!
     description: String
     title: String
-    image:
-    link:
   }
 
   type Auth {
@@ -32,7 +30,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    saveBook(????): User
+    saveBook(bookId: Int): User
 
     removeBook(bookId: String!): User
   }

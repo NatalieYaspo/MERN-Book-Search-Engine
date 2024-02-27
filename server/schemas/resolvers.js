@@ -3,12 +3,12 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-      users: async () => {
-        return User.find().populate('books');
-      },
-      user: async (parent, { username }) => {
-        return User.findOne({ username }).populate('books');
-      },
+      // users: async () => {
+      //   return User.find().populate('books');
+      // },
+      // user: async (parent, { username }) => {
+      //   return User.findOne({ username }).populate('books');
+      // },
     //   thoughts: async (parent, { username }) => {
     //     const params = username ? { username } : {};
     //     return Thought.find(params).sort({ createdAt: -1 });
