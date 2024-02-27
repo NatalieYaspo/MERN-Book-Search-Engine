@@ -1,20 +1,18 @@
 
-// NEED TO UPDATE THIS TYPEDEFS
 const typeDefs = `
   type User {
     _id: ID
     username: String
     email: String
-    password: String
     bookCount: Int
     savedBooks: [Book]
   }
 
   type Book {
-    bookId: String
-    authors: [String]!
-    description: String
-    title: String
+    bookId: String!
+    authors: [String]
+    description: String!
+    title: String!
     link: String
     image: String
   }
@@ -26,7 +24,7 @@ const typeDefs = `
 
   type Query {
     me: User
-    user(username: String!): User
+    
   }
 
   type Mutation {
