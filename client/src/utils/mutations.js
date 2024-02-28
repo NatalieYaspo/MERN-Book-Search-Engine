@@ -27,22 +27,22 @@ export const ADD_USER = gql`
 
 // NEED TO ADD CORRECT PARAMETERS TO SAVE BOOK
 export const SAVE_BOOK = gql`
-  mutation saveBook($bookTitle: String!) {
-    saveBook(bookTitle: $bookTitle) {
+  mutation saveBook($title: String!) {
+    saveBook(title: $title) {
       _id
-      bookTitle
-      bookAuthor
+      title
+      author
     }
   }
 `;
 
-// NEED TO ADD CORRECT PARAMETERS TO SAVE BOOK
+// NEED TO ADD CORRECT PARAMETERS TO REMOVE BOOK
 export const REMOVE_BOOK = gql`
-  mutation removeBook($bookTitle: String!) {
-    removeBook(bookTitle: $bookTitle) {
+  mutation removeBook($title: String!) {
+    removeBook(title: $title) {
       _id
-      bookTitle
-      bookAuthor
+      title
+      author
     }
   }
 `;
