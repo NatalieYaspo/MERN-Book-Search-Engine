@@ -14,7 +14,7 @@ A MERN stack search engine for books.
 
 ## Installation
 
-URL:
+URL: https://mern-book-search-engine-d6ph.onrender.com/
 
 ## Usage
 
@@ -55,9 +55,6 @@ Developer: Natalie Yaspo
 Collaborators:
 - Coulter, Kyle via zoom 27 February, 2024
 - Le, Roger via zoom 27 February, 2024
-
-Tutorials:
-- 
 
 ## License
 
